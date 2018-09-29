@@ -1,1 +1,17 @@
-Python記法でやるかな？
+class Game():
+  def __info__(self):
+    TITLE = "Old_Maid"
+    AUTHOR = "AkinoYuki"
+    GAME_TYPE = Trump.Collecting.going-out
+
+  def __init__(self):
+    player(3)
+    
+  def __player__(self):
+    setName()
+    setRole()
+  
+  def __card__(self):
+    Trump.trump52(1)#counts
+    Trump.joker(1)#Add a Joker
+    a_1 = 1+1

@@ -35,6 +35,7 @@ public class ScriptReader {
 	private List<String> lines;
 	private String title="No title";//Def
 	private String author="anonymous";//Def
+	public int row=0;
 
 	/**
 	 * This method read text file & store to List.
@@ -42,34 +43,30 @@ public class ScriptReader {
 	 * @return {@code true} if successful of load file.
 	 * @throws IOException
 	 */
-	private boolean loadFile() throws IOException {
+	private void loadFile() throws IOException {
 		lines = Files.readAllLines(path);
-		return codeCheck();
-	}
-
-	private boolean codeCheck() {
-		return true;
+		row = lines.size();
 	}
 	/**
 	 *
-	 * @return {@code true} if successful of load file.
 	 * @throws IOException
 	 */
-	public boolean reload() throws IOException {
-		return loadFile();
+	public void reload() throws IOException {
+		loadFile();
 	}
 	/**
 	 * Get any line from source code.
 	 * @param index index of list. (count from 0)
-	 * @return a line of code.
+	 * @return String line.
 	 */
-	public String printCode(int index) {
+	public String getLine(int index) {
 		return lines.get(index);
 	}
 	public void printSource() {
-		System.out.println("<Start_of_Lines>");
-		for(int i=0;i<lines.size();i++)System.out.println(lines.get(i));
-		System.out.println("<End_of_Lines>");
+		for(int i=0;i<row;i++)System.out.println(lines.get(i));
+	}
+	public List<String> getList(){
+		return lines;
 	}
 
 	public String toString() {
