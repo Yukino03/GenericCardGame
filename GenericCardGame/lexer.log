@@ -1,0 +1,38 @@
+class Game():
+0 : Indent
+class : Variable
+Game : Variable
+( : Blanket
+) : Blanket
+: : Head
+
+  def __info__(self):
+2 : Indent
+def : Variable
+__info__ : Variable
+( : Blanket
+self : Variable
+) : Blanket
+: : Head
+
+    TITLE = "Old_Maid"
+4 : Indent
+TITLE : Variable
+= : Sign
+" : Blanket
+Old_Maid : Variable
+" : Blanket
+
+    AUTHOR = "AkinoYuki"
+4 : Indent
+AUTHOR : Variable
+= : Sign
+" : Blanket
+AkinoYuki : Variable
+" : Blanket
+
+    GAME_TYPE = Trump.Collecting.going-out
+Exception in thread "main" java.lang.Exception: Not a character.
+	at jp.ac.stu.meisei_u.j165003.GCG.Lexer.nextToken(Lexer.java:52)
+	at jp.ac.stu.meisei_u.j165003.GCG.Lexer.Tokenize(Lexer.java:33)
+	at jp.ac.stu.meisei_u.j165003.GCG.Main.main(Main.java:13)

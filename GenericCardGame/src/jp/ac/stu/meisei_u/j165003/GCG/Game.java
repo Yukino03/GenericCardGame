@@ -8,6 +8,7 @@ package jp.ac.stu.meisei_u.j165003.GCG;
  *
  */
 public class Game {
+	private int step=0;
 	public Game(String path) {
 		ScriptReader sr = new ScriptReader(path);
 	}
@@ -17,7 +18,10 @@ public class Game {
 	 * 同時にゲームの初期化が行われます。
 	 */
 	public void start() {
-		System.out.println("Start Called.");
+		step=0;
+		System.out.printf("%d:Game Start.\n",step);
+		__info__();
+		__init__();
 	}
 	/**
 	 * スクリプトを読み進めます。
@@ -30,5 +34,12 @@ public class Game {
 	public void printSource() {
 		// TODO 自動生成されたメソッド・スタブ
 
+	}
+
+	private void __info__() {
+
+	}
+
+	private void __init__() {
 	}
 }
